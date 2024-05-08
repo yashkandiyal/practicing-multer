@@ -27,7 +27,10 @@ app.post("/one-shot", upload.single("inputFile"), (req, res) => {
 
   res.json({ message: "File uploaded successfully", file: file });
 });
-app.post("/parallel-upload", (req, res) => {});
+app.post("/parallel-upload",upload.single("inputFile") ,(req, res) => {
+
+  
+});
 
 app.listen(PORT, () => {
   console.log(`Server is listening at port ${PORT}`);
