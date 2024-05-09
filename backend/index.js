@@ -30,6 +30,7 @@ app.post("/one-shot", upload.single("inputFile"), (req, res) => {
   console.log(NumberOfChunks);
   res.json({ message: "File uploaded successfully", file: file });
 });
+<<<<<<< HEAD
 app.post("/parallel-upload", upload.single("inputFile"), (req, res) => {
   // so the approach is simple whatever the size of the file is we will divide it by the chunk size we want
   const file = req.file;
@@ -41,6 +42,12 @@ app.post("/parallel-upload", upload.single("inputFile"), (req, res) => {
   const NumberOfChunks = Math.ceil(fileSize / chunkSize);
 });
 app.post("/aws-upload", upload.single("inputFile"), (req, res) => {});
+=======
+app.post("/parallel-upload",upload.single("inputFile") ,(req, res) => {
+
+  
+});
+>>>>>>> dd2b17100fae39f3c97ac0b149aa204f69116ae5
 
 app.listen(PORT, () => {
   console.log(`Server is listening at port ${PORT}`);
