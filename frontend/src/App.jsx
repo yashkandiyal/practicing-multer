@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const App = () => {
   const [inputFile, setInputFile] = useState("");
   // console.log(inputFile);
-
+  //change the end-point of the api for parallel uploads and s3 bucket storage
   const submitFile = async (e) => {
     e.preventDefault();
     try {

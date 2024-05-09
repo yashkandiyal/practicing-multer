@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
   },
 });
 const upload = multer({ storage: storage });
-//There was some problem in payment for aws account my card was getting rejected so i have used dummy data.
+//There was some problem in payment for aws account, my card was getting rejected so i have used dummy data.
 const cloudS3Storage = multer.memoryStorage();
 const uploadCloud = multer({ storage: cloudS3Storage });
 
